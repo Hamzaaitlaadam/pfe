@@ -1,0 +1,282 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    height:100vh;
+    width:100%;
+    overflow: hidden;
+   
+}
+@font-face{
+    font-family:'dr';
+    src: url(font/Roboto-Regular.ttf);
+    font-style: normal;
+}
+.container-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height: 100%;
+    background-color: #fff;
+}
+.cart-home{
+    position: relative;
+    width:55%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 6px 6px 94px -28px rgba(0,0,0,0.07);
+    
+}
+
+.head{
+    position:sticky;
+    top:0;
+    width: 100%;
+    height: 60px;
+    z-index: 1111;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #000;
+    color:#fff;
+    box-shadow: 0px 4px 5px -3px rgba(0,0,0,0.16);
+    margin-bottom:20px;
+}
+.head i{
+    
+    font-size:25px;
+    cursor: pointer;
+}
+.head p{
+    font-size: 30px;
+    font-family: 'dr';
+    letter-spacing: 8px;
+}
+.cart-item{
+    
+    height: 40px;
+    width:40px;
+    border-radius: 50%;
+    background-color: #ffa24e;
+    color:#000;
+    font-family: 'dr';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.cart-body{
+    height: 65%;
+    overflow-y: scroll;
+    background-color: #fff;
+}
+.cart-body::-webkit-scrollbar-thumb{
+    background: lightgrey;
+    height: 4px;
+    border-radius: 20px;
+}
+.cart-body::-webkit-scrollbar{
+    background:#fff;
+    width: 6px;
+    border-radius: 20px;
+}.product-cart-contain{
+    flex-grow: 1;
+    padding: 10px 24px 10px;
+}
+.product-cart{
+   position: relative; 
+    margin-bottom: 10px;
+    border-radius: 3px; 
+    background-color: #fff;
+    box-shadow: 10px 10px 10px -7px rgba(0,0,0,0.10);
+  
+}
+.detai{
+    display:flex;
+    align-items: center;
+    padding:15px;
+}
+.plat-info{
+    margin-left:35px;
+    font-family: 'dr';
+}
+.plat-nom{
+    font-size:20px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.plat-prix{
+    font-size:18px;
+}
+.cart-img {
+    width:120px;
+}
+.trash{
+    position: absolute;
+    right:20px;
+    top:15px;
+    font-size: 25px;
+    cursor: pointer;
+    color:#ff7f5a;
+}
+.controls{
+    position: absolute;
+    right: 25px;
+    bottom:15px;
+}
+.quantity{
+    width:150px;
+    height:40px;
+    display: flex;display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.quantity-num{
+    width:30px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    outline: none;
+}
+.decr,
+.incr{
+    width:50px;
+    height:30px;
+    background-color: #f6be00;
+    color:#fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+.cart-home .bottom{
+    position:fixed;
+    bottom: 0;
+    width:55%;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-top-left-radius:20px ;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -7px 14px -3px rgba(0,0,0,0.1);
+}
+.topay{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -40px;
+    padding-bottom:20px;
+    border-bottom:1px dashed #000;
+}
+.topay p{
+    font-family: 'dr';
+    font-size:18px;
+}
+.topay .total{
+    font-family: 'dr';
+    font-size:15px;
+    text-align: center;
+    border: none;
+    outline: none;
+}
+.valide-total{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.valide-total p{
+    font-family: 'dr';
+    font-size:18px; 
+}
+.valider-panier{
+    width:43%;
+    padding: 10px;
+    background-color: #f6be00;
+    color:#fff;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-family: 'dr';
+    border: none;
+}
+
+
+@media screen and (max-width:900px) {
+    .cart-home{
+        position: relative;
+        width:90%;
+        height:100%;
+       
+    
+    }   
+}
+
+@media screen and (max-width:680px) {
+    .cart-home{
+        position: relative;
+        width:100%;
+        height:100%;
+
+    }   
+    .head p{
+        font-size: 25px;
+        margin-left: 15px;
+    }
+    .product-cart-contain{
+        
+        padding: 10px 10px 10px;
+    }
+    .controls{
+    
+        right: 10px;
+        bottom:10px;
+    }
+    .quantity{
+        width:100px;
+        height:40px;
+    }
+    .quantity-num{
+        width:20px;
+        
+    }
+    .decr,
+    .incr{
+        width:35px;
+        height:25px;
+       font-size: 16px;
+       
+    }
+    .plat-nom{
+        font-size:17px;
+    }
+    
+    .plat-info{
+        margin-left:15px; 
+    }
+    .trash{
+        top:8px;
+        right:7px;
+    }
+    .cart-home .bottom{
+        width:100%;
+    }
+    .valider-panier{
+        width:52%;
+        font-size: 19px;
+        letter-spacing: 2px;
+    }
+}
